@@ -17,6 +17,9 @@ module.exports = {
           deep:"#AEAEAE",
           light:"#FFFFFF"
         }
+      },
+      fontFamily:{
+        Poppins:'poppins'
       }
     },
   },
