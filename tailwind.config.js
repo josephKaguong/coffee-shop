@@ -1,3 +1,6 @@
+
+
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // NOTE: Update this to include the paths to all of your component files.
@@ -18,9 +21,9 @@ module.exports = {
           light:"#FFFFFF"
         }
       },
-      fontFamily:{
-        Poppins:'poppins'
-      }
+     fontFamily:{
+      poppins:['Poppins_400Regular']
+     }
     },
   },
   plugins: [],
