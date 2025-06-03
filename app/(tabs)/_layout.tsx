@@ -6,6 +6,7 @@ import { Tabs } from "expo-router";
 
 export default function TabsLayout(){
     return(
+        
         <Tabs 
             
             screenOptions={{
@@ -31,5 +32,6 @@ export default function TabsLayout(){
             <Tabs.Screen name="favourite"  options={{ tabBarIcon:({color})=><Foundation name="heart" size={24} color={color} />}}/>
             <Tabs.Screen name="notification"  options={{ tabBarIcon:({color})=><FontAwesome name="bell" size={24} color={color} />}}/>
         </Tabs>
+      
     )
 }

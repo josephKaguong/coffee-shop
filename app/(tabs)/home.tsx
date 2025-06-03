@@ -4,13 +4,13 @@ import BeansData from '@/data/BeansData';
 import CoffeeData from '@/data/CoffeeData';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import React from 'react';
-import { FlatList, Text, TextInput, View } from 'react-native';
+import { FlatList, ScrollView, Text, TextInput, View } from 'react-native';
 
 const Home = () => {
   const coffeeType=["All","Cappucchino", "Espresso", "Americano","Macchiato","Latte", "Black Coffee"]
 
   return (
-    <View className='ml-[28px]'>
+    <ScrollView showsVerticalScrollIndicator={false} className='ml-[28px]'>
       <Text className="w-[195px] h-[72px] mt-[120px] font-poppins font-semibold text-[28px] text-white-light leading-[36px]">Find the best coffee for you</Text>
       
       <View className="flex flex-row items-center w-[330px] h-[45px] mt-[28px] pl-[18px] bg-gray-two rounded-[10px]">
@@ -42,14 +42,15 @@ const Home = () => {
             horizontal
             showsHorizontalScrollIndicator={false}
             renderItem={({item})=>(
-              <CoffeeDesign/>
+             <CoffeeDesign/>
             )}
          />
+          
 
          <View className="mt-[20px]">
             <Text className="h-[20px] w-[108px] font-poppins font-medium text-[16px] text-white-light leading-[20px]">Coffee beans</Text>
             <FlatList
-                className="h-[246px] w-[662px] mt-[15px]"
+                className="h-[246px] w-[492px] mt-[15px]"
                 data={BeansData}
                 keyExtractor={(item)=>item.id}
                 horizontal
@@ -58,9 +59,10 @@ const Home = () => {
                   <BeanDesign/>
                 )}
             />
+             
          </View>
       
-    </View>
+    </ScrollView>
   )
 }
 
